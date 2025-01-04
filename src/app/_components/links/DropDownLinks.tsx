@@ -3,7 +3,7 @@ import { ReactComponent as ArrowBottom } from 'public/icons/arrow-bottom.svg'
 
 interface Props {
     label: String
-    links: Partial<LinkProps> & { children: React.ReactNode, href: URL }[]
+    links: Partial<LinkProps> & { children: React.ReactNode, href: string|URL }[]
 }
 
 export default function DropDownLinks(props: Props) {

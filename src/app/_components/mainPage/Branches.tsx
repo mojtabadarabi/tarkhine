@@ -1,7 +1,7 @@
 import aghdasie from 'public/images/branches/aghdasie.png'
 import BranchCard from '../BranchCard'
 import UiContainer from '../UiContainer'
-import { branches } from '@/app/contact-us/page'
+import { branches } from '@/app/configs'
 
 export default function Branches() {
 
