@@ -9,7 +9,7 @@ export default async function Home() {
 
   if (isMobile) {
     return <main>
-      mobile layout
+      mobile layout 2
     </main>
   }
 
