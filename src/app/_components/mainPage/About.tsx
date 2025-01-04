@@ -7,26 +7,29 @@ import { ReactComponent as User } from 'public/icons/users/user.svg'
 import aboutImg from 'public/images/about.png'
 import UiContainer from '../UiContainer'
 
-export default function MainAbout() {
-
-    const icons = [
+export const aboutIcons = (fill = '#fff') => {
+    const tailwindFillColor = `fill-[${fill}]`
+    return [
         {
             label: 'کیفیت بالای غذاها',
-            icon: <Diagram className='fill-[#fff]' width={55} hanging={55}/>
+            icon: <Diagram className={`${tailwindFillColor}`} width={55} hanging={55} />
         },
         {
             label: 'محیطی دلنشین و آرام',
-            icon: <HomeWifi className='fill-[#fff]' width={55} hanging={55}/>
+            icon: <HomeWifi className={`${tailwindFillColor}`} width={55} hanging={55} />
         },
         {
             label: 'پرسنلی مجرب و حرفه‌ای',
-            icon: <User className='fill-[#fff]' width={55} hanging={55}/>
+            icon: <User className={`${tailwindFillColor}`} width={55} hanging={55} />
         },
         {
             label: 'منوی متنوع',
-            icon: <Menuboard className='fill-[#fff]' width={55} hanging={55} />
+            icon: <Menuboard className={`${tailwindFillColor}`} width={55} hanging={55} />
         },
     ]
+}
+
+export default async function MainAbout() {
 
     return (
         <div className='relative aspect-[16/9] max-h-[450px] w-full'>
@@ -40,7 +43,7 @@ export default function MainAbout() {
                 <div className='w-1/2 flex items-center justify-center'>
                     <div className='grid grid-cols-2 gap-28'>
                         {
-                            icons.map((icon,index) => (
+                            aboutIcons().map((icon, index) => (
                                 <div key={index} className='flex flex-col gap-4 items-center justify-center'>
                                     {icon.icon}
                                     <h4 className='text-sm font-medium'>{icon.label}</h4>
