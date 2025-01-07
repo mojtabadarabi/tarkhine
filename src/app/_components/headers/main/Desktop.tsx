@@ -10,7 +10,7 @@ import UiContainer from '../../UiContainer'
 export default function DesktopHeader() {
   return (
     <UiContainer className='bg-white p-6 px-32 flex justify-between items-center'>
-      <Link href="/"><Logo className='w-[130px]' /></Link>
+      <Link href="/"><Logo className='w-[130px] fill-primary' /></Link>
       <div className='flex items-center justify-center gap-8 text-md font-medium'>
         <NavLink href={'/'}>صفحه اصلی</NavLink>
         <DropDownLinks label={'شعبه'} links={[
