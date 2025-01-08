@@ -1,6 +1,7 @@
 import MainCategory from "@/app/_components/mainPage/MainCategory";
 import { ReactComponent as ArrowBottom } from 'public/icons/arrow-bottom.svg';
 import { ReactComponent as Logo } from 'public/svg/logo_with_title.svg';
+import BottomNavigation from "./_components/BottomNavigation";
 import MobilePageHeader from "./_components/MobilePageHeader";
 import DropDownLinks from "./_components/links/DropDownLinks";
 import MainAbout from "./_components/mainPage/About";
@@ -9,7 +10,6 @@ import MainMenuSwiper from "./_components/mainPage/MainMenuSwiper";
 import MainSlider from "./_components/mainPage/MainSlider";
 import { getIsDeviceMobile } from "./_utils/ui";
 import { branches } from "./configs";
-import BottomNavigation from "./_components/BottomNavigation";
 
 export default async function Home({ searchParams }: { searchParams: Promise<{ tab: string }> }) {
   const { tab } = await searchParams
@@ -53,8 +53,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ t
   }
 
   if (isMobile) {
-    return <main>
-      <MobilePageHeader className={"h-[70px]"}>
+    return <main className="flex flex-col h-screen">
+      <MobilePageHeader className={""}>
         <div className="flex w-full items-center justify-between">
           <Logo className="w-[110px] fill-white " />
           <DropDownLinks
@@ -74,11 +74,10 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ t
             })} />
         </div>
       </MobilePageHeader>
-      <div className="h-[calc(100vh-130px)] overflow-auto">
-      {getMAinComponent()}
-
+      <div className="flex-1 overflow-y-auto">
+        {getMAinComponent()}
       </div>
-      <BottomNavigation className={"h-[60px]"} />
+      <BottomNavigation className={""} />
     </main>
   }
 
