@@ -53,7 +53,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ t
   }
 
   if (isMobile) {
-    return <main className="flex flex-col h-screen">
+    return <main className="flex flex-col h-[100svh]">
       <MobilePageHeader className={""}>
         <div className="flex w-full items-center justify-between">
           <Logo className="w-[110px] fill-white " />
