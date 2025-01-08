@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import MainHeader from "./_components/headers/main";
-import MainFooter from "./_components/footers/main";
-import "./globals.css";
+import { ReactComponent as ArrowBottom } from 'public/icons/arrow-bottom.svg';
+import { ReactComponent as Logo } from 'public/svg/logo_with_title.svg';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import MainFooter from "./_components/footers/main";
+import MainHeader from "./_components/headers/main";
+import DropDownLinks from "./_components/links/DropDownLinks";
+import MobilePageHeader from "./_components/MobilePageHeader";
 import { getIsDeviceMobile } from "./_utils/ui";
+import { branches } from "./configs";
+import "./globals.css";
+import BottomNavigation from "./_components/BottomNavigation";
 
 const estedad = localFont({
   src: "./fonts/Estedad-Bold.woff2",
@@ -31,9 +37,22 @@ export default async function RootLayout({
       <body
         className={`${estedad.variable} antialiased`}
       >
-        {!isMobile&&<MainHeader />}
-        {children}
-        {!isMobile&&<MainFooter />}
+        {
+          isMobile ? (
+            <>
+
+              
+                {children}
+              
+            </>
+          ) : (
+            <>
+              <MainHeader />
+              {children}
+              <MainFooter />
+            </>
+          )
+        }
       </body>
     </html>
   );
