@@ -14,7 +14,7 @@ export default function MainMenuSwiper({ isForMobile = false }: { isForMobile?: 
             <Swiper
                 slidesPerView={2.1}
                 spaceBetween={20}
-                className=' w-full h-[280px]'
+                className=' w-full h-[280px] px-2'
             >
                 {
                     mainMenu.map((menuItem, index) => (

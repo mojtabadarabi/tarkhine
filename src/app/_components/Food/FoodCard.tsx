@@ -15,8 +15,8 @@ export default function FoodCard({ ...food }) {
                         {
                             food.discount && food.discount !== 0 ? (
                                 <>
-                                    <span className='text-xl line-through text-gray-400'>{food.price}</span>
-                                    <span className='text-red-600 text-xl'>{food.discount} %</span>
+                                    <span className='text-md line-through text-gray-400'>{food.price}</span>
+                                    <span className='text-red-600 text-md'>{food.discount} %</span>
                                 </>
                             ):null
                         }

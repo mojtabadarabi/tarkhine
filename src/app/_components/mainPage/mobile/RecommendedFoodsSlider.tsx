@@ -13,7 +13,7 @@ export default function RecommendedFoods({ isForMobile = false }: { isForMobile?
       <Swiper
         slidesPerView={1.4}
         spaceBetween={20}
-        className=' w-full'
+        className=' w-full px-2'
       >
         {
           recommendedFoods.map((food, index) => (

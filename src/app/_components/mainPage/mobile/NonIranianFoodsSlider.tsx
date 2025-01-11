@@ -13,7 +13,7 @@ export default function NonIranianFoodsSlider({ isForMobile = false }: { isForMo
       <Swiper
         slidesPerView={1.4}
         spaceBetween={20}
-        className=' w-full'
+        className=' w-full px-2'
       >
         {
           popularFoods.map((food, index) => (
