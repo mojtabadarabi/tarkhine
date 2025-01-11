@@ -10,6 +10,9 @@ import MainMenuSwiper from "./_components/mainPage/MainMenuSwiper";
 import MainSlider from "./_components/mainPage/MainSlider";
 import { getIsDeviceMobile } from "./_utils/ui";
 import { branches } from "./configs";
+import RecommendedFoods from "./_components/mainPage/mobile/RecommendedFoodsSlider";
+import PopularFoodsSlider from "./_components/mainPage/mobile/PopularFoodsSlider";
+import NonIranianFoodsSlider from "./_components/mainPage/mobile/NonIranianFoodsSlider";
 
 export default async function Home({ searchParams }: { searchParams: Promise<{ tab: string }> }) {
   const { tab } = await searchParams
@@ -22,6 +25,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ t
         return <>
           <MainSlider isForMobile={true} />
           <MainMenuSwiper />
+          <RecommendedFoods/>
+          <PopularFoodsSlider />
+          <NonIranianFoodsSlider/>
         </>
       case 'bookmark':
         return <>

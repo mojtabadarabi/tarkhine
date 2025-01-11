@@ -7,12 +7,12 @@ import { mainMenu } from './MainCategory'
 export default function MainMenuSwiper({ isForMobile = false }: { isForMobile?: boolean }) {
 
     return (
-        <div className='mb-8'>
+        <div className='mb-4 py-2 bg-white'>
             <h1 className='bg-[#e5f2e9] my-8 w-fit text-xl font-bold px-10 py-3 rounded-tl-xl rounded-bl-xl text-black'>
                 منوی رستوران
             </h1>
             <Swiper
-                slidesPerView={2.2}
+                slidesPerView={2.1}
                 spaceBetween={20}
                 className=' w-full h-[280px]'
             >
