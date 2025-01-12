@@ -26,9 +26,9 @@ export default function BottomNavigation({ className = '' }: { className?: strin
                     <ShoppingCart width={25} height={25} className={` ${tab === 'cart' ? 'fill-primary' : 'fill-gray-600'}`} />
                     <span className={`text-sm ${!tab || tab === 'cart' ? 'text-primary' : 'text-gray-600'}`}>سبد خرید</span>
                 </Link>
-                <Link href={'/?tab=bookmark'} type="button" className="inline-flex flex-col items-center justify-center gap-1 ">
-                    <Bookmark width={25} height={25} className={` ${tab === 'bookmark' ? 'fill-primary' : 'fill-gray-600'}`} />
-                    <span className={`text-sm ${!tab || tab === 'bookmark' ? 'text-primary' : 'text-gray-600'}`}>سفارشات</span>
+                <Link href={'/?tab=orders'} type="button" className="inline-flex flex-col items-center justify-center gap-1 ">
+                    <Bookmark width={25} height={25} className={` ${tab === 'orders' ? 'fill-primary' : 'fill-gray-600'}`} />
+                    <span className={`text-sm ${!tab || tab === 'orders' ? 'text-primary' : 'text-gray-600'}`}>سفارشات</span>
                 </Link>
                 <Link href={'/?tab=profile'} type="button" className="inline-flex flex-col items-center justify-center gap-1 ">
                     <User width={25} height={25} className={` ${tab === 'profile' ? 'fill-primary' : 'fill-gray-600'}`} />
