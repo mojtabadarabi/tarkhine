@@ -1,11 +1,13 @@
 import MainCategory from "@/app/_components/mainPage/MainCategory";
 import BottomNavigation from "./_components/BottomNavigation";
+import CartTab from "./_components/cart/Tab";
 import MainAbout from "./_components/mainPage/About";
 import Branches from "./_components/mainPage/Branches";
 import MainSlider from "./_components/mainPage/MainSlider";
 import MainTab from "./_components/mainPage/Tab";
 import OrdersTab from "./_components/orders/Tab";
 import ProfileTab from "./_components/profile/Tab";
+import SearchTab from "./_components/search/Tab";
 import { getIsDeviceMobile } from "./_utils/ui";
 
 export default async function Home({ searchParams }: { searchParams: Promise<{ tab: string }> }) {
@@ -21,18 +23,12 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ t
         return <OrdersTab />
       case 'profile':
         return <ProfileTab />
-      case 'user':
-        return <>
-          user
-        </>
       case 'search':
         return <>
-          search
+          <SearchTab />
         </>
       case 'cart':
-        return <>
-          cart
-        </>
+        return <CartTab />
 
       default:
         return <MainTab />
