@@ -5,9 +5,11 @@ import { ReactComponent as UserSvg } from 'public/icons/users/user.svg'
 import { ReactComponent as Logo } from 'public/svg/logo_with_title.svg'
 import DropDownLinks from '../../links/DropDownLinks'
 import NavLink from '../../links/NavLink'
+import NavLinkActive from '../../links/NavLinkActive'
 import UiContainer from '../../UiContainer'
 
-export default function DesktopHeader() {
+export default async function DesktopHeader() {
+
   return (
     <UiContainer className='bg-white p-6 px-32 flex justify-between items-center'>
       <Link href="/"><Logo className='w-[130px] fill-primary' /></Link>
@@ -58,9 +60,14 @@ export default function DesktopHeader() {
         <Link href={'/auth'} className='text-primary bg-primary-50 p-2 rounded-md '>
           <SearchSvg className='fill-primary' width={25} hanging={25} />
         </Link>
-        <Link href={'/auth'} className='text-primary bg-primary-50 p-2 rounded-md '>
-          <CartSvg className='fill-primary' width={25} hanging={25} />
-        </Link>
+        <NavLinkActive
+          href='/cart'
+          className='p-2 rounded-md'
+          activeClassName='bg-primary fill-white'
+          nonActiveClassName='bg-primary-50 fill-primary'
+        >
+          <CartSvg width={25} hanging={25} />
+        </NavLinkActive>
         <Link href={'/auth'} className='text-primary bg-primary-50 p-2 rounded-md '>
           <UserSvg className='fill-primary' width={25} hanging={25} />
         </Link>

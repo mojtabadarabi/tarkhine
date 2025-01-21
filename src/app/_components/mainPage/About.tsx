@@ -12,19 +12,19 @@ export const aboutIcons = (fill = '#fff') => {
     return [
         {
             label: 'کیفیت بالای غذاها',
-            icon: <Diagram className={`${tailwindFillColor}`} width={55} hanging={55} />
+            icon: <Diagram fill={fill} className={`${tailwindFillColor}`} width={55} hanging={55} />
         },
         {
             label: 'محیطی دلنشین و آرام',
-            icon: <HomeWifi className={`${tailwindFillColor}`} width={55} hanging={55} />
+            icon: <HomeWifi fill={fill} className={`${tailwindFillColor}`} width={55} hanging={55} />
         },
         {
             label: 'پرسنلی مجرب و حرفه‌ای',
-            icon: <User className={`${tailwindFillColor}`} width={55} hanging={55} />
+            icon: <User fill={fill} className={`${tailwindFillColor}`} width={55} hanging={55} />
         },
         {
             label: 'منوی متنوع',
-            icon: <Menuboard className={`${tailwindFillColor}`} width={55} hanging={55} />
+            icon: <Menuboard fill={fill} className={`${tailwindFillColor}`} width={55} hanging={55} />
         },
     ]
 }
